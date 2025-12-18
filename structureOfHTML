@@ -1,0 +1,9 @@
+<html>
+<head> <!--Element contain meta information about the HTML page ( Web page ) -->
+<title> <!-- Name of webpage --> 
+</head>
+<body> <!-- show all the content like heading, paragraph, image, etc. -->
+<h1> h1 heading </h1> <!-- this is a heading tag. -->
+<p> this is a paragraph tag </p> <!-- it uses for long content --> 
+</body> 
+</html>
