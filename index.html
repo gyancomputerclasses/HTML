@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .nav{
+            background-color: rgb(0, 110, 255);
+        }
+        .navbar{
+            display: flex;
+            position: relative;
+            list-style: none;
+            padding: 10px;
+            justify-content: space-around;
+            font-size: 20px;
+        }
+        .topnavbar a{
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+        }
+        .nav li:nth-child(3){
+            background-color: red;
+            padding: 10px;
+            border-radius: 50px;
+        }
+        .nav li:nth-child(4){
+            background-color: red;
+            padding: 10px;
+            border-radius: 50px;
+        }
+        .nav li:nth-child(5){
+            background-color: red;
+            padding: 10px;
+            border-radius: 50px;
+        }
+        marquee p{
+            color: white;
+            padding: 10px;
+        }
+        marquee p a{
+            color: yellow;
+            font-weight: bold;
+        }
+        .banner img{
+            width: 100%;
+        }
+        .menu{
+            background-color: rgb(0, 110, 255);
+            position: relative;
+        }
+        .menu .menubar{
+            display: flex;
+            position: relative;
+            list-style: none;
+            padding: 10px;
+            justify-content: space-around;
+        }
+        .menu .menubar .topmenubar a{
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+        }
+        .topmenubar{
+             position: relative;
+        }
+        .submenu{
+            position: absolute;
+            top: 28px;
+            left: 0;
+            background: rgb(0,110,255);
+            width: 200px;
+            display: none;
+        }
+        .submenu li{
+            list-style: none;
+        }
+        .submenu li a{
+            display: block;
+            padding: 10px;
+            color: white;
+        }
+        .submenu li a:hover{
+            background: red;
+        }
+        /* Hover Effect */
+        .topmenubar:hover .submenu{
+            display: block;
+        }
+        .submenu li{
+            position: relative;
+        }
+        /* second dropdown */
+        .subsubmenu{
+            position: absolute;
+            left: 200px;
+            top: 0;
+            width: 220px;
+            background: rgb(0,110,255);
+            display: none;
+        }
+        .subsubmenu li{
+            list-style: none;
+        }
+        .subsubmenu li a{
+            display: block;
+            padding: 10px;
+            color: white;
+        }
+        .submenu li:hover .subsubmenu{
+            display: block;
+        }
+        /* third level dropdown */
+        .thirdmenu{
+            position: absolute;
+            left: 220px;
+            top: 0;
+            width: 200px;
+            background: rgb(0,110,255);
+            display: none;
+        }
+        .thirdmenu li{
+            list-style: none;
+        }
+        .thirdmenu li a{
+            display: block;
+            padding: 10px;
+            color: white;
+        }
+        /* hover */
+        .subsubmenu li:hover .thirdmenu{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <section class="nav">
+        <ul class="navbar">
+            <li class="topnavbar"><i class="fa-solid fa-envelope"></i><a href="">pawankumar@gmail.com</a></li>
+            <li class="topnavbar"><i class="fa-solid fa-phone"></i><a href="">+91 9874563210</a></li>
+            <li class="topnavbar"><a href="">Admission Portal</a></li>
+            <li class="topnavbar"><a href="">Known Your Form No.</a></li>
+            <li class="topnavbar"><a href="">Library</a></li>
+        </ul>
+        <marquee behavior="" direction=""><p>Examination form of Degree(Semester-II) is being filled up * Click Here toa <a href="">downlaod Examination Form</a> for Degree (Sem-II)*</p></marquee>
+    </section>
+    <section class="banner">
+        <img src="https://kisancollege.ac.in/images/banner_top.jpg" alt="">
+    </section>
+    <section class="menu">
+        <ul class="menubar">
+            <li class="topmenubar"><a href="">Home</a></li>
+            <li class="topmenubar">
+                <a href="">About</a>
+                    <ul class="submenu">
+                        <li><a href="">College at a Glance</a></li>
+                        <li><a href="">Principal Message</a></li>
+                        <li><a href="">Vision & Mission</a></li>
+                        <li>
+                            <a href="">Infrastructure</a>
+                                <ul class="subsubmenu">
+                                    <li><a href="">Classroom </a></li>
+                                    <li><a href="">Laboratry</a></li>
+                                    <li><a href="">Computer Resource Center</a></li>
+                                    <li><a href="">Confrence Room</a></li>
+                                    <li><a href="">Girl Common Room</a></li>
+                                    <li><a href="">Girl Hostel</a></li>
+                                </ul>
+                        </li>
+                    </ul>
+            </li>
+            <li class="topmenubar">
+                <a href="">Library</a>
+                    <ul class="submenu">
+                        <li><a href="">N-List</a></li>
+                        <li><a href="">OPAC</a></li>
+                        <li><a href="">Library Administration Login</a></li>
+                        <li><a href="">Publication</a></li>
+                    </ul>
+            </li>
+            <li class="topmenubar">
+                <a href="">Administration</a>
+                    <ul class="submenu">
+                        <li><a href="">Administgration Structure</a></li>
+                        <li><a href="">Cell & Commitie</a></li>
+                        <li><a href="">Non Teching Staff</a></li>
+                    </ul>
+            </li>
+            <li class="topmenubar">
+                <a href="">Department</a>
+                    <ul class="submenu">
+                        <li><a href="">Commerce</a></li>
+                        <li><a href="">Humanities</a></li>
+                        <li><a href="">Social Science</a></li>
+                        <li><a href="">Science</a></li>
+                        <li><a href="">Vocatioinal Course</a></li>
+                    </ul>
+            </li>
+            <li class="topmenubar">
+                <a href="">Student ZOne</a>
+                    <ul class="submenu">
+                        <li><a href="">Procedure & Policies</a></li>
+                        <li><a href="">Rules & Regulation</a></li>
+                        <li><a href="">Course Offer</a></li>
+                        <li>
+                            <a href="">Syllabus</a>
+                                 <ul class="subsubmenu">
+                                    <li><a href="">UG Syllabus </a></li>
+                                    <li><a href="">PG Syllabus</a></li>
+                                    <li>
+                                        <a href="">Vocation Syllabus</a>
+                                            <ul class="thirdmenu">
+                                                <li><a href="">BBM</a></li>
+                                                <li><a href="">BCA</a></li>
+                                                <li><a href="">BSC (IT) </a></li>
+                                                <li><a href="">B.LIS</a></li>
+                                            </ul>
+                                    </li>
+                                </ul>
+                        </li>
+                        <li><a href="">Time Table</a></li>
+                        <li><a href="">NCC</a></li>
+                        <li><a href="">NSS</a></li>
+                        <li><a href="">Sports</a></li>
+                        <li><a href="">College Cultural & creativity Forum</a></li>
+                        <li><a href="">Youth red Cross</a></li>
+                        <li><a href="">Scolarship</a></li>
+                        <li><a href="">Syudent List</a></li>
+                    </ul>
+            </li>
+            <li class="topmenubar">
+                <a href="">NAAC</a>
+                    <ul class="submenu">
+                        <li><a href="">AISHE</a></li>
+                        <li><a href="">NIRF</a></li>
+                        <li><a href="">IQSE</a></li>
+                        <li><a href="">IIQA</a></li>
+                        <li><a href="">SSR</a></li>
+                        <li><a href="">NSP 2.0</a></li>
+                    </ul>
+            </li>
+            <li class="topmenubar"><a href="">Notification</a></li>
+            <li class="topmenubar"><a href="">Sehat Kendra</a></li>
+            <li class="topmenubar">
+                <a href="">Feedback</a>
+                    <ul class="submenu">
+                        <li><a href="">Student Feedeback</a></li>
+                        <li><a href="">Teacher Feedback</a></li>
+                        <li><a href="">Alumni Feedback</a></li>
+                        <li><a href="">Parents Feedback</a></li>
+                    </ul>
+            </li>
+            <li class="topmenubar"><a href="">Contact</a></li>
+            <li class="topmenubar"><a href="">Alumni Kisan College</a></li>
+        </ul>
+    </section>
+    <section>
+        
+    </section>
+</body>
+</html>

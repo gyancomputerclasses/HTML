@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Billing</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .product-btn { margin: 5px; padding: 10px; cursor: pointer; }
+        .bill { margin-top: 20px; border: 1px solid #000; padding: 10px; width: 300px; }
+    </style>
+</head>
+<body>
+
+    <h2>Product Billing System</h2>
+
+    <button class="product-btn" >Add Product A - ₹100</button>
+    <button class="product-btn" onclick="addToBill('Product B', 200)">Add Product B - ₹200</button>
+    <button class="product-btn" onclick="addToBill('Product C', 150)">Add Product C - ₹150</button>
+
+    <div class="bill">
+        <h3>Bill Details</h3>
+        <ul id="bill-list"></ul>
+        <p><strong>Total: ₹<span id="total">0</span></strong></p>
+    </div>
+
+    <script>
+        let bill = {}; // Stores product count and price
+        let total = 0; // Stores total amount
+
+        function addToBill(product, price) {
+            if (bill[product]) {
+                bill[product].count++;
+            } else {
+                bill[product] = { count: 1, price: price };
+            }
+
+            total += price;
+            updateBill();
+        }
+
+        function updateBill() {
+            let billList = document.getElementById('bill-list');
+            let totalElement = document.getElementById('total');
+
+            billList.innerHTML = ''; // Clear list before updating
+            for (let product in bill) {
+                let item = document.createElement('li');
+                item.textContent = `${product} x ${bill[product].count} = ₹${bill[product].count * bill[product].price}`;
+                billList.appendChild(item);
+            }
+
+            totalElement.textContent = total;
+        }
+    </script>
+
+</body>
+</html>
