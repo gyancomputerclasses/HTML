@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- The <video> tag is used to embed video content in a document, such as a movie clip or other video streams. -->
+    <!-- The <video> tag contains one or more <source> tags with different video sources. The browser will choose the first source it supports. -->
+    
+    <video src="video.mp4" controls>go to video</video>
+    
+    <!--Basic Video  -->
+    <video controls>
+    <source src="video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+    </video>
+
+
+    <!-- with width and height Attributes  -->
+    <video width="640" height="360" controls>
+        <source src="video.mp4" type="video/mp4">
+        <source src="video.webm" type="video/webm">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Automatically Play  Attributes-->
+     <video src="video.mp4" controls autoplay muted width="500"></video>
+
+     <!-- mute Attributes -->
+    <video src="video.mp4" controls autoplay muted  width="500"></video>
+
+    <!-- loop attributes -->
+     <video src="video.mp4" controls loop muted width="500"></video>
+
+     <!-- Thumbnail Image -->
+      <video src="video.mp4" controls poster="photo.png" muted width="500"></video>
+</body>
+</html>
